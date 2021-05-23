@@ -8,9 +8,21 @@
     <title>Exemplo</title>
 </head>
 <body>
-    <form action="localhost" method="post" style="position: absolute; top:0px;left: 50%;transform: translateX(-50%);z-index: 100;">
-        <input type="hidden" name="obj" value="${JSON.stringify(vet)}">
-        <input type="submit" value="Enviar">
-    </form>
+    <div id="control">
+        <div id="up"></div>
+        <div id="left"></div>
+        <div id="right"></div>
+        <div id="down"></div>
+    </div>
+    <script>
+        function loop(){
+            document.querySelector("#up").offsetWidth<70?console.log(" up clicou!!"):0
+            document.querySelector("#left").offsetWidth<70?console.log(" left clicou!!"):0
+            document.querySelector("#right").offsetWidth<70?console.log(" right clicou!!"):0
+            document.querySelector("#down").offsetWidth<70?console.log(" down clicou!!"):0
+            requestAnimationFrame(loop)
+        }
+        loop()
+    </script>
 </body>
 </html>

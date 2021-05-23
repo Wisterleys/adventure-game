@@ -1,0 +1,59 @@
+#control{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+#up{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top:0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: blue;
+}
+#up:active{
+    background-color: green;
+    width: 69px;
+}
+
+#left{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top:50%;
+    left: 0%;
+    transform: translateY(-50%);
+    background-color: blue;
+}
+#left:active{
+    background-color: green;
+    width: 69px;
+}
+#right{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top:50%;
+    left: 100%;
+    transform: translate(-100%,-50%);
+    background-color: blue;
+}
+#right:active{
+    background-color: green;
+    width: 69px;
+}
+#down{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top:100%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    background-color: blue;
+}
+#down:active{
+    background-color: green;
+    width: 69px;
+}
