@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/controls.css">
     <title>Exemplo</title>
 </head>
 <body>
-    
+    <form action="localhost" method="post" style="position: absolute; top:0px;left: 50%;transform: translateX(-50%);z-index: 100;">
+        <input type="hidden" name="obj" value="${JSON.stringify(vet)}">
+        <input type="submit" value="Enviar">
+    </form>
 </body>
 </html>
