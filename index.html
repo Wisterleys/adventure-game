@@ -9,16 +9,23 @@
 </head>
 <body>
     <div id="control">
-        <div id="up" class="btn-control"></div>
-        <div id="left" class="btn-control"></div>
-        <div id="right" class="btn-control"></div>
-        <div id="down" class="btn-control"></div>
+        <input id="up" class="btn-control" type="image" src="arrow.svg" alt="">
+        <input id="left" class="btn-control" type="image" src="arrow.svg">
+        <input id="right" class="btn-control" type="image" src="arrow.svg">
+        <input id="down" class="btn-control" type="image" src="arrow.svg">
     </div>
     <script>
         document.querySelectorAll(".btn-control").forEach(btn=>{
-            btn.addEventListener("mousemove",e=>{console.log(e.target.style.background="green")})
-            btn.addEventListener("mouseout",e=>{console.log(e.target.style.background="blue")})
+            btn.addEventListener("mousemove",e=>e.target.style.background="green")
+            btn.addEventListener("mouseout",e=>e.target.style.background="blue")
         })
+        function loop(){
+            document.querySelectorAll(".btn-control").forEach(btn=>{
+                btn.style.background&&btn.style.background=="green"?console.log(btn.id):0
+            })
+            requestAnimationFrame(loop)
+        }
+        loop()
     </script>
 </body>
 </html>

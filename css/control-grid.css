@@ -1,7 +1,6 @@
 #control{
     width: 100px;
     height: 100px;
-    background-color: brown;
     display: grid;
     grid-template-areas: ". up ."
                           "l . r"
@@ -9,17 +8,24 @@
 }
 #up{
     grid-area: up;
+    width: 100%;
+    transform: rotate(180deg);
     background-color: blue;
 }
 #left{
     grid-area: l;
+    width: 100%;
+    transform: rotate(90deg);
     background-color: blue;
 }
 #right{
     grid-area: r;
+    width: 100%;
+    transform: rotate(-90deg);
     background-color: blue;
 }
 #down{
     grid-area: d;
+    width: 100%;
     background-color: blue;
 }
