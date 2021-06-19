@@ -4,25 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/controls.css">
+    <link rel="stylesheet" href="css/control-grid.css">
     <title>Exemplo</title>
 </head>
 <body>
     <div id="control">
-        <div id="up"></div>
-        <div id="left"></div>
-        <div id="right"></div>
-        <div id="down"></div>
+        <div id="up" class="btn-control"></div>
+        <div id="left" class="btn-control"></div>
+        <div id="right" class="btn-control"></div>
+        <div id="down" class="btn-control"></div>
     </div>
     <script>
-        function loop(){
-            document.querySelector("#up").offsetWidth<70?console.log(" up clicou!!"):0
-            document.querySelector("#left").offsetWidth<70?console.log(" left clicou!!"):0
-            document.querySelector("#right").offsetWidth<70?console.log(" right clicou!!"):0
-            document.querySelector("#down").offsetWidth<70?console.log(" down clicou!!"):0
-            requestAnimationFrame(loop)
-        }
-        loop()
+        document.querySelectorAll(".btn-control").forEach(btn=>{
+            btn.addEventListener("mousemove",e=>{console.log(e.target.style.background="green")})
+            btn.addEventListener("mouseout",e=>{console.log(e.target.style.background="blue")})
+        })
     </script>
 </body>
 </html>

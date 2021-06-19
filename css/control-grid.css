@@ -1,0 +1,25 @@
+#control{
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    display: grid;
+    grid-template-areas: ". up ."
+                          "l . r"
+                          ". d ."  
+}
+#up{
+    grid-area: up;
+    background-color: blue;
+}
+#left{
+    grid-area: l;
+    background-color: blue;
+}
+#right{
+    grid-area: r;
+    background-color: blue;
+}
+#down{
+    grid-area: d;
+    background-color: blue;
+}
