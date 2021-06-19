@@ -16,13 +16,17 @@
     </div>
     <script>
         document.querySelectorAll(".btn-control").forEach(btn=>{
-            btn.addEventListener("mousemove",e=>e.target.style.background="green")
-            btn.addEventListener("mouseout",e=>e.target.style.background="blue")
+            btn.addEventListener("mousedown",e=>e.target.style.background="green")
+            btn.addEventListener("mouseup",e=>e.target.style.background="blue")
         })
-        function loop(){
+        function getBtn(){
             document.querySelectorAll(".btn-control").forEach(btn=>{
-                btn.style.background&&btn.style.background=="green"?console.log(btn.id):0
+                btn.style.background&&btn.style.background=="green"?console.log(btn.id):0//Aqui coloca a função ou método que realiza a movimentação do player
             })
+            
+        }
+        function loop(){
+            getBtn()
             requestAnimationFrame(loop)
         }
         loop()
