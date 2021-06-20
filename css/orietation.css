@@ -4,7 +4,6 @@
         justify-content: center;
         align-items: center;
         width: 100vw;
-        background-color: skyblue;
         visibility: visible
     }
     .general-info img{
@@ -22,7 +21,7 @@
         visibility: hidden
     }
 }
-
+/* Game rodará dentro dessa orientação */
 @media screen and (orientation:landscape) {
     .general-info{
         visibility: hidden
