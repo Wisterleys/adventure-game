@@ -47,6 +47,7 @@
         position: relative;
         height: 80vh;
         grid-area: main;
+        overflow-x: scroll;
     }
     .cenario{
         position: absolute;
