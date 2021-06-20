@@ -61,36 +61,3 @@ body{
 /* Hover está informando o JS para realizar o evento */
 .btn-control:active{background-color: rgb(0, 128, 0);}
 
-@media screen and (orientation:portrait) {
-    .general-info{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        background-color: skyblue;
-        visibility: visible
-    }
-    .general-info img{
-        padding: 0px;
-        margin: 0px;
-        width: 90%;
-        animation: roate 3s infinite;
-    }
-    @keyframes roate {
-        0%{transform: rotate(0deg)}
-        100%{transform: rotate(90deg)}
-    
-    }
-    body{
-        visibility: hidden
-    }
-}
-
-@media screen and (orientation:landscape) {
-    .general-info{
-        visibility: hidden
-    }
-    body{
-        visibility: visible;
-    }
-}
