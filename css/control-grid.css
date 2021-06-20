@@ -56,7 +56,9 @@
     grid-area: su;
     width: 100%;
 }
-.btn-control{border-radius: 50px;background-color: rgb(237, 237, 241);}
+.action{border-radius: 50px;background-color: rgb(237, 237, 241);}
 /* Hover está informando o JS para realizar o evento de click*/
-.btn-control:active{background-color: rgb(0, 128, 0);}
+.action:active{background-color: rgb(0, 128, 0);}
+.action2{background-color: rgb(237, 237, 241)}
+.action2:active{background-color: rgb(0, 128, 0);}
 
