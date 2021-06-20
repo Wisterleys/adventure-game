@@ -1,13 +1,10 @@
-body{
-    margin: 0px;
-    padding: 0px;
-    width: 100vw;
-    height: 100vh;
-}
+
 #control-painel{
+    grid-area: control;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 #control{
     width: 100px;

@@ -23,10 +23,47 @@
 }
 /* Game rodará dentro dessa orientação */
 @media screen and (orientation:landscape) {
+    html{padding: 0px;margin: 0px;}
     .general-info{
         visibility: hidden
     }
     body{
+        padding: 0px;margin: 0px;
         visibility: visible;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-areas:    "header header header"
+                                "main main main"
+                                "footer footer footer"
+        ;
+    }
+    #main-header{
+        grid-area: header;
+        background-color: springgreen;
+        height: 10vh;
+    }
+    main{
+        background-color: red;
+        height: 80vh;
+        grid-area: main;
+        display: grid;
+        grid-template-areas:    "."
+                                "control";
+    }
+    #main-footer{
+        height: 10vh;
+        background-color: saddlebrown;
+        grid-area: footer;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+
+    }
+    /* area do jogo*/
+    #space-game{
+        background-color: green;
+        width: 100%;
+        height: 100%;
     }
 }

@@ -5,42 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <title>Exemplo</title>
+    <title>Game Witie</title>
 </head>
 <body>
-    <div class="general-info">
-        <img src="img/cel.svg" alt="">
-    </div>
-    <div id="control-painel">
-        <div id="control">
-            <input id="up" class="btn-control" type="image" src="img/arrow.svg" alt="" oncontextmenu="return false;">
-            <input id="left" class="btn-control" type="image" src="img/arrow.svg" oncontextmenu="return false;">
-            <input id="right" class="btn-control" type="image" src="img/arrow.svg" oncontextmenu="return false;">
-            <input id="down" class="btn-control" type="image" src="img/arrow.svg" oncontextmenu="return false;">
+    <header id="main-header">
+
+    </header>
+    <main>
+        <!-- Controls -->
+        <div id="control-painel">
+            <div id="control">
+                <input id="up" class="btn-control" type="image" src="img/arrow.svg" alt="" oncontextmenu="return false;">
+                <input id="left" class="btn-control" type="image" src="img/arrow.svg" oncontextmenu="return false;">
+                <input id="right" class="btn-control" type="image" src="img/arrow.svg" oncontextmenu="return false;">
+                <input id="down" class="btn-control" type="image" src="img/arrow.svg" oncontextmenu="return false;">
+            </div>
+            <div class="control-actions">
+                <input id="shoot" class="btn-control" type="image" src="img/shoot.svg" oncontextmenu="return false;">
+                <input id="run" class="btn-control" type="image" src="img/run.svg" oncontextmenu="return false;">
+                <input id="super" class="btn-control" type="image" src="img/super.svg" oncontextmenu="return false;">
+            </div>
         </div>
-        <div class="control-actions">
-            <input id="shoot" class="btn-control" type="image" src="img/shoot.svg" oncontextmenu="return false;">
-            <input id="run" class="btn-control" type="image" src="img/run.svg" oncontextmenu="return false;">
-            <input id="super" class="btn-control" type="image" src="img/super.svg" oncontextmenu="return false;">
+        <!-- ----------------------- -->
+    </main>
+    <footer id="main-footer">
+        <div class="general-info">
+            <img src="img/cel.svg" alt="">
         </div>
-    </div>
-    <script>
-        
-        function getStyle(element,value){
-            return window.getComputedStyle(element).getPropertyValue(value)
-        }
-        const colorDefault = getStyle(document.querySelector(".btn-control"),"background-color")
-        function getBtn(){
-            document.querySelectorAll(".btn-control").forEach(btn=>{
-                getStyle(btn,"background-color")!=colorDefault?console.log(btn.id):0//Aqui coloca a função ou método que realiza a movimentação do player
-            })
-            
-        }
-        function loop(){
-            getBtn()
-            requestAnimationFrame(loop)
-        }
-        loop()
-    </script>
+    </footer>
+ <script src="js/controles/controls.js"></script>
 </body>
 </html>
