@@ -9,22 +9,23 @@
 </head>
 <body>
     <div id="control">
-        <input id="up" class="btn-control" type="image" src="arrow.svg" alt="">
-        <input id="left" class="btn-control" type="image" src="arrow.svg">
-        <input id="right" class="btn-control" type="image" src="arrow.svg">
-        <input id="down" class="btn-control" type="image" src="arrow.svg">
+        <input id="up" class="btn-control" type="image" src="arrow.svg" alt="" oncontextmenu="return false;">
+        <input id="left" class="btn-control" type="image" src="arrow.svg" oncontextmenu="return false;">
+        <input id="right" class="btn-control" type="image" src="arrow.svg" oncontextmenu="return false;">
+        <input id="down" class="btn-control" type="image" src="arrow.svg" oncontextmenu="return false;">
     </div>
     <script>
-        document.querySelectorAll(".btn-control").forEach(btn=>{
-            btn.addEventListener("mousedown",e=>e.target.style.background="green")
-            btn.addEventListener("mouseup",e=>e.target.style.background="blue")
-        })
+        function getStyle(element,value){
+            return window.getComputedStyle(element).getPropertyValue(value)
+        }
         function getBtn(){
+            
             document.querySelectorAll(".btn-control").forEach(btn=>{
-                btn.style.background&&btn.style.background=="green"?console.log(btn.id):0//Aqui coloca a função ou método que realiza a movimentação do player
+                getStyle(btn,"background-color")=="rgb(0, 128, 0)"?console.log(btn.id):0//Aqui coloca a função ou método que realiza a movimentação do player
             })
             
         }
+       //getBtn()
         function loop(){
             getBtn()
             requestAnimationFrame(loop)
