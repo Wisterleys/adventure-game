@@ -33,4 +33,5 @@ body{
     width: 100%;
 }
 .btn-control{border-radius: 50px;background-color: rgb(0, 0, 255);}
+/* Hover está informando o JS para realizar o evento */
 .btn-control:active{background-color: rgb(0, 128, 0);}
