@@ -44,12 +44,15 @@
         height: 10vh;
     }
     main{
-        background-color: red;
+        position: relative;
         height: 80vh;
         grid-area: main;
-        display: grid;
-        grid-template-areas:    "."
-                                "control";
+    }
+    .cenario{
+        position: absolute;
+        width: 8000px;
+        height: 80vh;
+        background-color:skyblue;
     }
     #main-footer{
         height: 10vh;
