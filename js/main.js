@@ -1,5 +1,5 @@
 const control = new Control();
-
+const cenario = $("#cenario")
 const player = $("#player")
 let vel =5
 let directionX=0
