@@ -35,6 +35,7 @@
         display: grid;
         grid-template-areas:    "header"
                                 "main"
+                                "floor"
         ;
     }
     #main-header{
