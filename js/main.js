@@ -1,29 +1,25 @@
 const control = new ControlMouse();
-const cenario = $("#cenario")
-const player = $("#player")
-let vel =5
-let directionX=0
-let directionY=0
+let play = new Player($(".cenario")[0]);
 function loop(){//Loop principal
+    console.log(this.play.directionX)
     if(control.getBtn()){
         switch(control.getBtn()){
             case"left":
-            directionX=-1
+            this.play.directionX=-1
             break
             case"right":
-            directionX=1
+            this.play.directionX=1
             break
             case"up":
-            directionY=-1
+            this.play.directionY=-1
             break
             case"down":
-            directionY=1
+            this.play.directionY=1
             break
         }
-    }else directionY=directionX =0
-
-    player.style.left=player.offsetLeft+(directionX*vel)+"px"
-    player.style.top=player.offsetTop+(directionY*vel)+"px"
-    requestAnimationFrame(loop)
+    }else this.play.directionY=this.play.directionX=0
+    this.play.player.style.left=this.play.player.offsetLeft+(this.play.directionX*this.play.vel)+"px"
+    this.play.player.style.top=this.play.player.offsetTop+(this.play.directionY*this.play.vel)+"px"
+    requestAnimationFrame(this.loop)
 }
 loop()

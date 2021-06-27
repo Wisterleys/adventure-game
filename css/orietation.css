@@ -65,13 +65,8 @@
     }
     .floor div{
         background-color: chocolate;
-        width: 300px;
+        width: 400px;
         height: 20vh;
     }
-    /* area do jogo*/
-    #space-game{
-        background-color: green;
-        width: 100%;
-        height: 100%;
-    }
+   
 }
