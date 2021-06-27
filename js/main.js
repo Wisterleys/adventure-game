@@ -1,10 +1,10 @@
-const control = new Control();
+const control = new ControlMouse();
 const cenario = $("#cenario")
 const player = $("#player")
 let vel =5
 let directionX=0
 let directionY=0
-function loop(){
+function loop(){//Loop principal
     if(control.getBtn()){
         switch(control.getBtn()){
             case"left":

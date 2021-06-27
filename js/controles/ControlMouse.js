@@ -1,4 +1,4 @@
-class Control{
+class ControlMouse{
     constructor(){
         this._colorDefault = this.getStyle($(".btn-control")[0],"background-color")
     }
