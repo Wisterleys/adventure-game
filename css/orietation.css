@@ -55,6 +55,19 @@
         height: 90vh;
         background-color:skyblue;
     }
+    .floor{
+        position: absolute;
+        bottom: 0px;
+        width: 8000px;
+        height: 20vh;
+        display: flex;
+        justify-content: space-between;
+    }
+    .floor div{
+        background-color: chocolate;
+        width: 300px;
+        height: 20vh;
+    }
     /* area do jogo*/
     #space-game{
         background-color: green;
